@@ -61,16 +61,15 @@ index = 0
 
 def find_num(our_list, target_num, our_index):
     if our_list[our_index] == target_num:
-        print(f"\nThe number {target_num} is at index {our_index}!\n")
+        return f"\nThe number {target_num} is at index {our_index}!\n"
     else:
         if our_list[our_index] == our_list[-1]:
-            print(-1)
+            return -1
         else:
             our_index += 1
-            find_num(our_list, target_num, our_index)
-    return our_list
+            return find_num(our_list, target_num, our_index)
 
-find_num(nums_list, target, index)
+print(find_num(nums_list, target, index))
 
 
 # def find_num(our_list, target_num):
